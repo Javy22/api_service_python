@@ -9,7 +9,7 @@ Descripcion:
 Programa creado para administrar la base de datos de registro de personas
 '''
 
-
+import matplotlib
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
@@ -53,6 +53,17 @@ def report(limit=0, offset=0):
 
     return json_result_list
 
+def dashboard():
+    query = db.session.query(Persona)
+    x= []
+    y= []
+    for person in query:
+            x.append(person.id)
+            y.append(person.age)
+    return (x , y)
+
+
+    
 
 if __name__ == "__main__":
     print("Test del modulo heart.py")
