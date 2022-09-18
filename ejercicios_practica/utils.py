@@ -29,6 +29,12 @@ def graficar(x, y):
     fig, ax = plt.subplots(figsize=(16, 9))
     ax.plot(x, y)
     ax.get_xaxis().set_visible(False)
+    ax.scatter(x, y, c="gray", marker=">", label="comparativa")
+    ax.legend()
+    ax.grid()
+    ax.set_ylabel('Age')
+    ax.set_xlabel('Name')
+    
 
     # Convertir ese grafico en una imagen para enviar por HTTP
     # y mostrar en el HTML

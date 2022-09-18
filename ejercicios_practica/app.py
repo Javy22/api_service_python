@@ -23,6 +23,10 @@ import persona
 
 import utils
 
+#Comentario del Julian 
+#También, podemos agregar limit y offset cuando usamos el módulo requests de python, de la siguiente forma
+#import requests
+#response = requests.get("http://http://127.0.0.1:5000?limit=5&offset=1")
 
 
 
